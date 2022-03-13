@@ -22,6 +22,7 @@ jobs:
         npm run build
     - name: Create Deployable FOLDER
       run: |
+        sudo chmod +x createDeployable.sh
         ./createDeployable.sh
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
