@@ -10,6 +10,10 @@ const io = require("socket.io")(http, {
 const routes = require('./routes');
 const utils = require('./utils').exec();
 
+if (process.env.NODE_ENV === 'development') {
+    require('dotenv').config();
+}
+
 app.use(cors({
     // origin: ['http://localhost:3000', 'http://localhost:5050', '/\.ngrok\.io$/']
     origin: '*'
@@ -46,6 +50,7 @@ app.all('*', (req, res) => {
     });
 });
 
-http.listen(8080, () => {
-    console.log('listening on http://localhost:8080');
+const PORT = process.env.PORT || 8080;
+http.listen(PORT, () => {
+    console.log(`listening on http://localhost:${PORT}`);
 });
