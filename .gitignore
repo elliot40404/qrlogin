@@ -30,5 +30,5 @@ coverage
 # Folder & files
 deploy/
 db/
-.env.*
+.env.*.local
 .env
