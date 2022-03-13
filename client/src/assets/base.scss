@@ -1,0 +1,44 @@
+// -- Font Import --
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+
+// -- Variables --
+
+$primary: #CAFFAA;
+$secondary: #C76E5B;
+$background: #2B2B2B;
+$foreground: #303030;
+$neutral: #808080;
+$highlight: #FB9C2D;
+$white: #FFFFFF;
+$black: #000000;
+$accent: #515151;
+
+// -- Themeing --
+
+// :root {
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --color: var($color)
+//   }
+// }
+
+// -- Base Styles --
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
