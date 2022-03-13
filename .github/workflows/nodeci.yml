@@ -16,17 +16,17 @@ jobs:
           node-version: '16.14.0'
           cache: 'npm'
       - name: install rsync
-        run: sudo apt install rsync
+      - run: sudo apt install rsync
       - name: install rsync
-        run: |
+      - run: |
           cd ./client
           npm ci
           npm run build
       - name: Create Deployable FOLDER
-        run: |
+      - run: |
           ./createDeployable.sh
       - name: Deploy
-        uses: s0/git-publish-subdir-action@develop
+      - uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
           BRANCH: deploy
