@@ -14,7 +14,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '16.14.0'
-        cache: 'npm'
     - name: install rsync and npm build
       run: |
         sudo apt install rsync
